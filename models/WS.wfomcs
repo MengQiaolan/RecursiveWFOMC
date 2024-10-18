@@ -1,0 +1,14 @@
+\forall X: (~Perm(X,X))
+& \forall X: (\exists Y: (Perm(X, Y)))
+& \forall Y: (\exists X: (Perm(X, Y)))
+& \forall X: (\forall Y: (Pred(X,Y) -> Perm(X,Y)))
+& \forall X: (\forall Y: (Pred(X,Y) -> LEQ(X,Y)))
+
+& \forall X: (\forall Y: (Perm(X,Y) -> E(X,Y)))
+& \forall X: (\forall Y: (E(X,Y) -> E(Y,X)))
+& \forall X: (~E(X,X))
+
+domain = 6  # the domain size $n$
+|Perm| = 6  # should be $n$
+|Pred| = 5  # should be $n-1$
+|E| = 18 # 2*n+2*m
